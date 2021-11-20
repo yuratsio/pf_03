@@ -25,3 +25,9 @@
     opacity: 0;
   }
 }
+
+@mixin rc() {
+  @media print, (prefers-reduced-motion: reduce) {
+    @content
+  }
+}
