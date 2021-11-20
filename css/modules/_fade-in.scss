@@ -1,0 +1,40 @@
+$pattern: (
+  "up": translateY(30px),
+  "left": translateX(30px),
+  "right": translateX(-30px),
+);
+
+@each $key, $value in $pattern {
+  .js-fade-in {
+    &.#{$key} {
+      & > .fade-in-item {
+        transform: $value;
+      }
+    }
+    &--active {
+      &.#{$key} {
+        & > .fade-in-item {
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+.js-fade-in {
+  & > .fade-in-item {
+    opacity: 0;
+  }
+  
+  &--active {
+    & > .fade-in-item {
+      transition: transform 1s ease-out, opacity 1s ease-out;
+      opacity: 1;
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * .2s;
+        }
+      } 
+    }
+  }
+}
