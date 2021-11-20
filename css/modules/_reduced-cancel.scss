@@ -1,0 +1,5 @@
+@media print, (prefers-reduced-motion: reduce) {
+  * {
+    transition: all .5s ease !important;
+  }
+}
