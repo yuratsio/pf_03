@@ -81,11 +81,20 @@
 }
 
 .js-fade-in--active > .fade-in-item {
+  opacity: 1;
   -webkit-transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
   transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
   transition: transform 1s ease-out, opacity 1s ease-out;
   transition: transform 1s ease-out, opacity 1s ease-out, -webkit-transform 1s ease-out;
-  opacity: 1;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item {
+    -webkit-transition: opacity 1s ease-out, -webkit-transform 1s ease-out !important;
+    transition: opacity 1s ease-out, -webkit-transform 1s ease-out !important;
+    transition: transform 1s ease-out, opacity 1s ease-out !important;
+    transition: transform 1s ease-out, opacity 1s ease-out, -webkit-transform 1s ease-out !important;
+  }
 }
 
 .js-fade-in--active > .fade-in-item:nth-child(1) {
@@ -93,9 +102,23 @@
           transition-delay: 0.2s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item:nth-child(1) {
+    -webkit-transition-delay: 0.2s !important;
+            transition-delay: 0.2s !important;
+  }
+}
+
 .js-fade-in--active > .fade-in-item:nth-child(2) {
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item:nth-child(2) {
+    -webkit-transition-delay: 0.4s !important;
+            transition-delay: 0.4s !important;
+  }
 }
 
 .js-fade-in--active > .fade-in-item:nth-child(3) {
@@ -103,9 +126,23 @@
           transition-delay: 0.6s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item:nth-child(3) {
+    -webkit-transition-delay: 0.6s !important;
+            transition-delay: 0.6s !important;
+  }
+}
+
 .js-fade-in--active > .fade-in-item:nth-child(4) {
   -webkit-transition-delay: 0.8s;
           transition-delay: 0.8s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item:nth-child(4) {
+    -webkit-transition-delay: 0.8s !important;
+            transition-delay: 0.8s !important;
+  }
 }
 
 .js-fade-in--active > .fade-in-item:nth-child(5) {
@@ -113,9 +150,23 @@
           transition-delay: 1s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item:nth-child(5) {
+    -webkit-transition-delay: 1s !important;
+            transition-delay: 1s !important;
+  }
+}
+
 .js-fade-in--active > .fade-in-item:nth-child(6) {
   -webkit-transition-delay: 1.2s;
           transition-delay: 1.2s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item:nth-child(6) {
+    -webkit-transition-delay: 1.2s !important;
+            transition-delay: 1.2s !important;
+  }
 }
 
 .js-fade-in--active > .fade-in-item:nth-child(7) {
@@ -123,9 +174,23 @@
           transition-delay: 1.4s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item:nth-child(7) {
+    -webkit-transition-delay: 1.4s !important;
+            transition-delay: 1.4s !important;
+  }
+}
+
 .js-fade-in--active > .fade-in-item:nth-child(8) {
   -webkit-transition-delay: 1.6s;
           transition-delay: 1.6s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item:nth-child(8) {
+    -webkit-transition-delay: 1.6s !important;
+            transition-delay: 1.6s !important;
+  }
 }
 
 .js-fade-in--active > .fade-in-item:nth-child(9) {
@@ -133,9 +198,23 @@
           transition-delay: 1.8s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item:nth-child(9) {
+    -webkit-transition-delay: 1.8s !important;
+            transition-delay: 1.8s !important;
+  }
+}
+
 .js-fade-in--active > .fade-in-item:nth-child(10) {
   -webkit-transition-delay: 2s;
           transition-delay: 2s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .js-fade-in--active > .fade-in-item:nth-child(10) {
+    -webkit-transition-delay: 2s !important;
+            transition-delay: 2s !important;
+  }
 }
 
 html {
