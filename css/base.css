@@ -138,13 +138,6 @@
           transition-delay: 2s;
 }
 
-@media print, (prefers-reduced-motion: reduce) {
-  * {
-    -webkit-transition: all .5s ease !important;
-    transition: all .5s ease !important;
-  }
-}
-
 html {
   font-size: 62.5%;
 }
@@ -204,6 +197,15 @@ button {
           transform-origin: right;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .hover-under-bar::after {
+    -webkit-transition: -webkit-transform 0.5s ease !important;
+    transition: -webkit-transform 0.5s ease !important;
+    transition: transform 0.5s ease !important;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease !important;
+  }
+}
+
 .hover-under-bar:hover::after {
   -webkit-transform: none;
           transform: none;
@@ -224,6 +226,13 @@ button {
   background-color: #fff;
   -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .header {
+    -webkit-transition: background-color 0.5s ease !important;
+    transition: background-color 0.5s ease !important;
+  }
 }
 
 .header__inner {
@@ -263,11 +272,25 @@ button {
           filter: drop-shadow(0px 0px 3px #000);
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .header__main-logo {
+    -webkit-transition: opacity 0.5s ease !important;
+    transition: opacity 0.5s ease !important;
+  }
+}
+
 .header__sub-logo {
   opacity: 1;
   position: absolute;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sub-logo {
+    -webkit-transition: opacity 0.5s ease !important;
+    transition: opacity 0.5s ease !important;
+  }
 }
 
 .header__lg {
@@ -331,6 +354,15 @@ button {
   transition: color 0.5s ease, filter 0.5s ease, -webkit-filter 0.5s ease;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .header__lg-nav-item > a {
+    -webkit-transition: color 0.5s ease, -webkit-filter 0.5s ease !important;
+    transition: color 0.5s ease, -webkit-filter 0.5s ease !important;
+    transition: color 0.5s ease, filter 0.5s ease !important;
+    transition: color 0.5s ease, filter 0.5s ease, -webkit-filter 0.5s ease !important;
+  }
+}
+
 @media (min-width: 768px) {
   .header__sm {
     display: none;
@@ -372,9 +404,23 @@ button {
           transition-delay: 0.05s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm--open .header__sm-nav-item:nth-child(1) {
+    -webkit-transition-delay: 0.05s !important;
+            transition-delay: 0.05s !important;
+  }
+}
+
 .header__sm--open .header__sm-nav-item:nth-child(2) {
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm--open .header__sm-nav-item:nth-child(2) {
+    -webkit-transition-delay: 0.1s !important;
+            transition-delay: 0.1s !important;
+  }
 }
 
 .header__sm--open .header__sm-nav-item:nth-child(3) {
@@ -382,9 +428,23 @@ button {
           transition-delay: 0.15s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm--open .header__sm-nav-item:nth-child(3) {
+    -webkit-transition-delay: 0.15s !important;
+            transition-delay: 0.15s !important;
+  }
+}
+
 .header__sm--open .header__sm-nav-item:nth-child(4) {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm--open .header__sm-nav-item:nth-child(4) {
+    -webkit-transition-delay: 0.2s !important;
+            transition-delay: 0.2s !important;
+  }
 }
 
 .header__sm--open .header__sm-nav-item:nth-child(5) {
@@ -392,9 +452,23 @@ button {
           transition-delay: 0.25s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm--open .header__sm-nav-item:nth-child(5) {
+    -webkit-transition-delay: 0.25s !important;
+            transition-delay: 0.25s !important;
+  }
+}
+
 .header__sm--open .header__sm-nav-item:nth-child(6) {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm--open .header__sm-nav-item:nth-child(6) {
+    -webkit-transition-delay: 0.3s !important;
+            transition-delay: 0.3s !important;
+  }
 }
 
 .header__sm--open .header__sm-nav-item:nth-child(7) {
@@ -402,9 +476,23 @@ button {
           transition-delay: 0.35s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm--open .header__sm-nav-item:nth-child(7) {
+    -webkit-transition-delay: 0.35s !important;
+            transition-delay: 0.35s !important;
+  }
+}
+
 .header__sm--open .header__sm-nav-item:nth-child(8) {
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm--open .header__sm-nav-item:nth-child(8) {
+    -webkit-transition-delay: 0.4s !important;
+            transition-delay: 0.4s !important;
+  }
 }
 
 .header__sm--open .header__sm-nav-item:nth-child(9) {
@@ -412,9 +500,23 @@ button {
           transition-delay: 0.45s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm--open .header__sm-nav-item:nth-child(9) {
+    -webkit-transition-delay: 0.45s !important;
+            transition-delay: 0.45s !important;
+  }
+}
+
 .header__sm--open .header__sm-nav-item:nth-child(10) {
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm--open .header__sm-nav-item:nth-child(10) {
+    -webkit-transition-delay: 0.5s !important;
+            transition-delay: 0.5s !important;
+  }
 }
 
 .header__sm-hamburger {
@@ -453,6 +555,15 @@ button {
   transition: transform 0.5s ease-out, background-color 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm-hamburger > span {
+    -webkit-transition: background-color 0.5s ease-out, -webkit-transform 0.5s ease-out !important;
+    transition: background-color 0.5s ease-out, -webkit-transform 0.5s ease-out !important;
+    transition: transform 0.5s ease-out, background-color 0.5s ease-out !important;
+    transition: transform 0.5s ease-out, background-color 0.5s ease-out, -webkit-transform 0.5s ease-out !important;
+  }
+}
+
 .header__sm-hamburger-text {
   position: absolute;
   top: 50%;
@@ -461,6 +572,13 @@ button {
   letter-spacing: 0.2em;
   -webkit-transition: opacity 1s ease, color 0.5s ease;
   transition: opacity 1s ease, color 0.5s ease;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm-hamburger-text {
+    -webkit-transition: opacity 1s ease, color 0.5s ease !important;
+    transition: opacity 1s ease, color 0.5s ease !important;
+  }
 }
 
 .header__sm-hamburger-text:first-of-type {
@@ -490,6 +608,17 @@ button {
  opacity 0.5s ease, visibility 0.5s ease;
   transition: background-color 0.5s ease, transform 0.5s ease,
  opacity 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm-slide {
+    -webkit-transition: background-color 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease !important;
+    transition: background-color 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease !important;
+    transition: background-color 0.5s ease, transform 0.5s ease,
+ opacity 0.5s ease, visibility 0.5s ease !important;
+    transition: background-color 0.5s ease, transform 0.5s ease,
+ opacity 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease !important;
+  }
 }
 
 .header__sm-nav {
@@ -523,6 +652,15 @@ button {
   transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm-nav-item {
+    -webkit-transition: -webkit-transform 1s ease !important;
+    transition: -webkit-transform 1s ease !important;
+    transition: transform 1s ease !important;
+    transition: transform 1s ease, -webkit-transform 1s ease !important;
+  }
+}
+
 .header__sm-nav-item:last-of-type {
   margin-bottom: 0;
 }
@@ -546,6 +684,15 @@ button {
   transition: color 0.5s ease, -webkit-filter 0.5s ease;
   transition: color 0.5s ease, filter 0.5s ease;
   transition: color 0.5s ease, filter 0.5s ease, -webkit-filter 0.5s ease;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .header__sm-nav-item > a {
+    -webkit-transition: color 0.5s ease, -webkit-filter 0.5s ease !important;
+    transition: color 0.5s ease, -webkit-filter 0.5s ease !important;
+    transition: color 0.5s ease, filter 0.5s ease !important;
+    transition: color 0.5s ease, filter 0.5s ease, -webkit-filter 0.5s ease !important;
+  }
 }
 
 .header__sm-button {
@@ -611,6 +758,15 @@ button {
   transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .reserve-form {
+    -webkit-transition: opacity 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease !important;
+    transition: opacity 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease !important;
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease !important;
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease !important;
+  }
+}
+
 @media (min-width: 768px) {
   .reserve-form {
     width: 550px;
@@ -642,6 +798,13 @@ button {
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .reserve-form__close-button {
+    -webkit-transition: opacity 0.3s ease !important;
+    transition: opacity 0.3s ease !important;
+  }
 }
 
 .reserve-form__close-button:hover {
@@ -743,6 +906,13 @@ button {
   color: #000;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .reserve-form__button {
+    -webkit-transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease !important;
+    transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease !important;
+  }
+}
+
 @media (min-width: 768px) {
   .reserve-form__button {
     width: auto;
@@ -777,6 +947,13 @@ button {
   background-color: #fff;
   -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
   transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .mask {
+    -webkit-transition: opacity 0.5s ease, visibility 0.5s ease !important;
+    transition: opacity 0.5s ease, visibility 0.5s ease !important;
+  }
 }
 
 .mask--active {
@@ -837,6 +1014,15 @@ button {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .footer__list-item > a::after {
+    -webkit-transition: -webkit-transform 0.5s ease !important;
+    transition: -webkit-transform 0.5s ease !important;
+    transition: transform 0.5s ease !important;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease !important;
+  }
 }
 
 .footer__list-item > a:hover::after {
