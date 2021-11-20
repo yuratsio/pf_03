@@ -138,6 +138,13 @@
           transition-delay: 2s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-transition: all .5s ease !important;
+    transition: all .5s ease !important;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -711,6 +718,7 @@ button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  color: #000;
 }
 
 @media (min-width: 768px) {
@@ -732,6 +740,7 @@ button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  color: #000;
 }
 
 @media (min-width: 768px) {
