@@ -209,7 +209,9 @@
 .mainvisual__inner {
   position: absolute;
   top: 33%;
-  right: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 @media (min-width: 1024px) {
