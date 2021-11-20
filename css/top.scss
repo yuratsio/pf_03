@@ -130,8 +130,8 @@
     animation-name: mainvisual-animation;
     animation-duration: 30s;
     animation-iteration-count: infinite;
-
     object-fit: cover;
+
     @for $i from 1 through 2 {
       &:nth-child(#{$i}) {
         animation-delay: -20s / $i;
@@ -141,7 +141,8 @@
   &__inner {
     position: absolute;
     top: 33%;
-    right: 15%;
+    left: 50%;
+    transform: translateX(-50%);
 
     @include mq(lg) {
       right: 25%;
