@@ -189,7 +189,7 @@ _:future,
   }
 
   &__inner {
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto;
     padding: 50px 4%;
     font-weight: 500;
@@ -228,15 +228,16 @@ _:future,
   &__text {
     height: max-content;
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 2.3;
-    letter-spacing: 0.4em;
-
+    letter-spacing: 0.2em;
+    
     @include mq(xs) {
-      letter-spacing: 0.2em;
+      font-size: 1.2rem;
     }
-
+    
     @include mq(md) {
+      letter-spacing: 0.4em;
       margin-bottom: 0;
       margin-left: 60px;
       font-size: 1.4rem;
@@ -581,7 +582,6 @@ _:future,
     margin: 0 25px;
     font-size: 1.6rem;
     text-align: left;
-
     appearance: none;
     &--active {
       display: inline;
@@ -598,6 +598,7 @@ _:future,
     display: grid;
     justify-content: center;
     position: absolute;
+    z-index: -1;
     top: 0;
     right: 0;
     left: 0;
@@ -611,6 +612,7 @@ _:future,
     grid-auto-rows: minmax(min-content, 130px);
     gap: 20px;
     &--active {
+      z-index: auto;
       & > .news__item {
         visibility: visible;
         opacity: 1;
