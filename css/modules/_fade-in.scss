@@ -25,16 +25,23 @@ $pattern: (
   & > .fade-in-item {
     opacity: 0;
   }
-  
+
   &--active {
     & > .fade-in-item {
-      transition: transform 1s ease-out, opacity 1s ease-out;
       opacity: 1;
+      transition: transform 1s ease-out, opacity 1s ease-out;
+      @include rc() {
+        transition: transform 1s ease-out, opacity 1s ease-out !important;
+      }
       @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
-          transition-delay: $i * .2s;
+          transition-delay: $i * 0.2s;
+
+          @include rc() {
+            transition-delay: $i * 0.2s !important;
+          }
         }
-      } 
+      }
     }
   }
 }
