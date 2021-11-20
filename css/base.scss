@@ -3,7 +3,6 @@
 @import "modules/breakpoints";
 @import "modules/mixin";
 @import "modules/fade-in";
-@import "modules/reduced-cancel";
 
 // ==============================
 // base
@@ -51,6 +50,9 @@ button {
     content: "";
     transition: transform 0.5s ease;
     transform-origin: right;
+    @include rc() {
+      transition: transform 0.5s ease !important;
+    }
   }
   &:hover {
     &::after {
@@ -73,6 +75,9 @@ button {
   z-index: 1;
   background-color: #fff;
   transition: background-color 0.5s ease;
+  @include rc() {
+    transition: background-color 0.5s ease !important;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -95,6 +100,9 @@ button {
     opacity: 0;
     position: absolute;
     transition: opacity 0.5s ease;
+    @include rc() {
+      transition: opacity 0.5s ease !important;
+    }
 
     filter: drop-shadow(0px 0px 3px #000);
   }
@@ -102,6 +110,9 @@ button {
     opacity: 1;
     position: absolute;
     transition: opacity 0.5s ease;
+    @include rc() {
+      transition: opacity 0.5s ease !important;
+    }
   }
   // ------------------------------
   // header__lg
@@ -143,6 +154,9 @@ button {
     & > a {
       color: #000;
       transition: color 0.5s ease, filter 0.5s ease;
+      @include rc() {
+        transition: color 0.5s ease, filter 0.5s ease !important;
+      }
     }
   }
   // ------------------------------
@@ -182,6 +196,9 @@ button {
           @for $i from 1 through 10 {
             &:nth-child(#{$i}) {
               transition-delay: $i * 0.05s;
+              @include rc() {
+                transition-delay: $i * 0.05s !important;
+              }
             }
           }
         }
@@ -208,6 +225,9 @@ button {
       height: 1px;
       background-color: #000;
       transition: transform 0.5s ease-out, background-color 0.5s ease-out;
+      @include rc() {
+        transition: transform 0.5s ease-out, background-color 0.5s ease-out !important;
+      }
     }
   }
   &__sm-hamburger-text {
@@ -216,6 +236,9 @@ button {
     transform: translateY(-50%) translateX(2px);
     letter-spacing: 0.2em;
     transition: opacity 1s ease, color 0.5s ease;
+    @include rc() {
+      transition: opacity 1s ease, color 0.5s ease !important;
+    }
     &:first-of-type {
       opacity: 1;
     }
@@ -237,6 +260,10 @@ button {
     text-align: center;
     transition: background-color 0.5s ease, transform 0.5s ease,
       opacity 0.5s ease, visibility 0.5s ease;
+    @include rc() {
+      transition: background-color 0.5s ease, transform 0.5s ease,
+        opacity 0.5s ease, visibility 0.5s ease !important;
+    }
   }
   &__sm-nav {
     margin-bottom: 60px;
@@ -254,6 +281,9 @@ button {
     transform: translateX(50px);
     margin-bottom: 20px;
     transition: transform 1s ease;
+    @include rc() {
+      transition: transform 1s ease !important;
+    }
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -272,6 +302,9 @@ button {
       width: 100%;
       color: #000;
       transition: color 0.5s ease, filter 0.5s ease;
+      @include rc() {
+        transition: color 0.5s ease, filter 0.5s ease !important;
+      }
     }
   }
   &__sm-button {
@@ -321,6 +354,9 @@ button {
   background-color: #fff;
   text-align: center;
   transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  @include rc() {
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease !important;
+  }
 
   @include mq(md) {
     width: 550px;
@@ -346,6 +382,9 @@ button {
     height: 18px;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    @include rc() {
+      transition: opacity 0.3s ease !important;
+    }
     &:hover {
       opacity: 0.7;
     }
@@ -419,6 +458,9 @@ button {
     font-size: 1.4rem;
     cursor: pointer;
     transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    @include rc() {
+      transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease !important;
+    }
     appearance: none;
     color: #000;
 
@@ -451,6 +493,9 @@ button {
   z-index: 20;
   background-color: #fff;
   transition: opacity 0.5s ease, visibility 0.5s ease;
+  @include rc() {
+    transition: opacity 0.5s ease, visibility 0.5s ease !important;
+  }
   &--active {
     visibility: visible;
     opacity: 0.7;
@@ -494,7 +539,9 @@ button {
         background-color: #000;
         content: "";
         transition: transform 0.5s ease;
-
+        @include rc() {
+          transition: transform 0.5s ease !important;
+        }
         transform-origin: bottom;
       }
       &:hover {
