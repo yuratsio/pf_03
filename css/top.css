@@ -74,7 +74,7 @@
 }
 
 .header--top .header__sm-slide {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .header--top .header__sm-nav-item::before {
@@ -182,6 +182,17 @@
   background-color: #707070;
 }
 
+.mainvisual__img-wrapper::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 80%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(transparent));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+}
+
 .mainvisual__img {
   position: absolute;
   width: 100%;
@@ -196,14 +207,39 @@
      object-fit: cover;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .mainvisual__img {
+    -webkit-animation-name: mainvisual-animation !important;
+            animation-name: mainvisual-animation !important;
+    -webkit-animation-duration: 30s !important;
+            animation-duration: 30s !important;
+    -webkit-animation-iteration-count: infinite !important;
+            animation-iteration-count: infinite !important;
+  }
+}
+
 .mainvisual__img:nth-child(1) {
   -webkit-animation-delay: -20s;
           animation-delay: -20s;
 }
 
+@media print, (prefers-reduced-motion: reduce) {
+  .mainvisual__img:nth-child(1) {
+    -webkit-animation-delay: -20s !important;
+            animation-delay: -20s !important;
+  }
+}
+
 .mainvisual__img:nth-child(2) {
   -webkit-animation-delay: -10s;
           animation-delay: -10s;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .mainvisual__img:nth-child(2) {
+    -webkit-animation-delay: -10s !important;
+            animation-delay: -10s !important;
+  }
 }
 
 .mainvisual__inner {
@@ -241,14 +277,6 @@
   .mainvisual__text {
     font-size: 3.4rem;
   }
-}
-
-_::-webkit-full-page-media,
-_:future,
-:root .mainvisual__inner {
-  right: 50%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
 }
 
 .introduction {
@@ -1261,6 +1289,7 @@ _:future,
 }
 
 .access__content-text {
+  color: #000;
   -ms-flex-preferred-size: 75%;
       flex-basis: 75%;
   margin-bottom: 5px;
