@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+@import "modules/breakpoints";
+@import "modules/mixin";
+
+// =============================
+// page common
+// =============================
+.wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0;
+
+  @include mq(md) {
+    padding: 0 30px;
+  }
+}
+// =============================
+// subvisual
+// =============================
+.subvisual {
+  position: relative;
+  height: 300px;
+  margin-bottom: 35px;
+
+  @include mq(md) {
+    height: 500px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    height: 100%;
+  }
+  &__title {
+    color: #fff;
+    font-weight: 800;
+    font-size: 3.4rem;
+
+    filter: drop-shadow(0px 0px 3px #000);
+  }
+  &__img-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+// =============================
+// breadcrumb
+// =============================
+.breadcrumb {
+  margin-bottom: 50px;
+  padding: 0 4%;
+
+  @include mq(lg) {
+    margin-bottom: 100px;
+    padding: 0;
+  }
+  &__list {
+    display: flex;
+    font-weight: 500;
+    font-size: 1.4rem;
+
+    @include mq(lg) {
+      font-size: 1.6rem;
+    }
+  }
+  &__item {
+    position: relative;
+    margin-right: 25px;
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -18px;
+      transform: translateY(-50%);
+      content: ">";
+    }
+    &:last-of-type {
+      &::after {
+        content: none;
+      }
+    }
+    & > a {
+      color: #000;
+    }
+  }
+}
+// =============================
+// content
+// =============================
+.content {
+  font-weight: 500;
+  &__list {
+    & > .content__item {
+      &:nth-of-type(even) {
+        & .content__img-wrapper {
+          margin-right: 0;
+          margin-left: auto;
+        }
+        & .content__text-wrapper {
+          right: auto;
+          width: 90%;
+          padding: 80px 30px 30px;
+
+          @include mq(md) {
+            width: 80%;
+            padding: 100px 50px 50px 50px;
+          }
+
+          @include mq(lg) {
+            top: 55px;
+            width: 69%;
+            padding: 60px 240px 110px 60px;
+          }
+        }
+      }
+    }
+  }
+  &__main-title-wrapper {
+    margin-bottom: 50px;
+    padding: 0 4%;
+
+    @include mq(md) {
+      margin-bottom: 80px;
+      text-align: center;
+    }
+  }
+  &__main-title {
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+  &__list {
+    overflow: hidden;
+
+    @include mq(md) {
+      overflow: visible;
+    }
+  }
+  &__description {
+    position: relative;
+  }
+  &__img-wrapper {
+    position: relative;
+    z-index: 5;
+    width: 90%;
+    height: 250px;
+    overflow: hidden;
+
+    @include mq(md) {
+      width: 70%;
+      height: 300px;
+    }
+
+    @include mq(lg) {
+      width: 50%;
+      max-width: 525px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+  &__text-wrapper {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    width: 90%;
+    padding: 80px 30px 30px;
+    background-image: url(../img/bg.png);
+
+    @include mq(md) {
+      top: 250px;
+      width: 80%;
+      padding: 100px 50px 50px 50px;
+    }
+
+    @include mq(lg) {
+      top: 55px;
+      width: 69%;
+      padding: 60px 60px 110px 240px;
+    }
+  }
+  &__sub-title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    line-height: 2;
+
+    @include mq(md) {
+      margin-bottom: 35px;
+      font-size: 2.4rem;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    line-height: 2;
+
+    @include mq(xs) {
+      font-size: 1.2rem;
+    }
+
+    @include mq(md) {
+      margin-bottom: 35px;
+      font-size: 1.6rem;
+    }
+  }
+  &__sub-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+  }
+}
+// =============================
+// spa effect
+// =============================
+.spa-effect {
+  margin-bottom: 65px;
+  padding: 40px 0 60px;
+  border-top: solid 1px #e7e7e7;
+  border-bottom: solid 1px #e7e7e7;
+
+  @include mq(md) {
+    margin-bottom: 95px;
+    padding: 95px 0 75px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+
+    @include mq(md) {
+      margin-bottom: 50px;
+      font-size: 2.6rem;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 4%;
+    font-weight: 500;
+    font-size: 1.4rem;
+
+    @include mq(md) {
+      padding: 0;
+      font-size: 1.5rem;
+    }
+  }
+  &__list-title {
+    flex-basis: 20%;
+    padding: 15px 0;
+    border-bottom: solid 1px #e7e7e7;
+
+    @include mq(xs) {
+      flex-basis: 30%;
+    }
+
+    @include mq(md) {
+      flex-basis: 25%;
+    }
+
+    &:first-of-type {
+      border-top: solid 1px #e7e7e7;
+    }
+  }
+  &__list-text {
+    flex-basis: 80%;
+    padding: 15px 0;
+    border-bottom: solid 1px #e7e7e7;
+
+    @include mq(xs) {
+      flex-basis: 70%;
+    }
+
+    @include mq(md) {
+      flex-basis: 75%;
+    }
+
+    &:first-of-type {
+      border-top: solid 1px #e7e7e7;
+    }
+  }
+}
