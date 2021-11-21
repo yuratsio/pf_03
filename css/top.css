@@ -282,17 +282,9 @@
 _::-webkit-full-page-media,
 _:future,
 :root .mainvisual__inner {
-  position: absolute;
-  top: 33%;
-  right: 15%;
-}
-
-@media (min-width: 1024px) {
-  _::-webkit-full-page-media,
-  _:future,
-  :root .mainvisual__inner {
-    right: 25%;
-  }
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 .introduction {
