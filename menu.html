@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。伝統的「和」の息づく空間で、至極のひとときをお過ごしください。">
+  <title>石井花壇 | 温海温泉旅館【公式サイト】</title>
+  <meta name="robots" content="noindex">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/page.css">
+
+</head>
+
+<body>
+  <!-- /#header.header -->
+  <header id="header" class="header header--top">
+    <div class="header__inner">
+      <div class="header__logo-wrapper">
+        <a href="/">
+          <img src="img/header-main-logo.png" alt="" class="header__main-logo">
+          <img src="img/header-sub-logo.png" alt="" class="header__sub-logo">
+        </a>
+      </div>
+      <div class="header__lg">
+        <nav class="header__lg-nav">
+          <ul class="header__lg-nav-list">
+            <li class="header__lg-nav-item hover-under-bar">
+              <a href="room.html">お部屋</a>
+            </li>
+            <li class="header__lg-nav-item hover-under-bar">
+              <a href="menu.html">お料理</a>
+            </li>
+            <li class="header__lg-nav-item hover-under-bar">
+              <a href="spa.html">温泉</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="reserve-button">
+          <img src="img/calender.png" alt="" class="reserve-button__img">
+          <p class="reserve-button__text">宿泊予約</p>
+        </button>
+      </div>
+
+      <div class="header__sm">
+        <button class="header__sm-hamburger">
+          <span></span>
+          <p class="header__sm-hamburger-text">メニュー</p>
+          <p class="header__sm-hamburger-text">閉じる</p>
+          <span></span>
+        </button>
+        <div class="header__sm-slide">
+          <nav class="header__sm-nav">
+            <ul class="header__sm-nav-list">
+              <li class="header__sm-nav-item hover-under-bar">
+                <a href="room.html" class="">お部屋</a>
+              </li>
+              <li class="header__sm-nav-item hover-under-bar">
+                <a href="menu.html">お料理</a>
+              </li>
+              <li class="header__sm-nav-item hover-under-bar">
+                <a href="spa.html">温泉</a>
+              </li>
+              <li class="header__sm-nav-item hover-under-bar">
+                <a href="#menu01" class="">料理について</a>
+              </li>
+              <li class="header__sm-nav-item hover-under-bar">
+                <a href="#menu02">食材について</a>
+              </li>
+              <li class="header__sm-nav-item hover-under-bar">
+                <a href="#menu03">職人について</a>
+              </li>
+              <li class="header__sm-nav-item hover-under-bar">
+                <a href="index.html">トップに戻る</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="reserve-button header__sm-button">
+            <img src="img/calender.png" alt="" class="reserve-button__img">
+            <p class="reserve-button__text">宿泊予約</p>
+          </button>
+        </div>
+      </div>
+
+      <form action="" class="reserve-form">
+        <p class="reserve-form__title">
+          宿泊予約
+        </p>
+        <div class="reserve-form__close-button">
+          <span></span>
+          <span></span>
+        </div>
+        <dl class="reserve-form__list">
+          <dt class="reserve-form__list-title">
+            <label for="name">お名前</label>
+          </dt>
+          <dd class="reserve-form__list-input-wrapper">
+            <input type="text" id="name" class="reserve-form__list-input" placeholder="あなたのお名前">
+          </dd>
+
+          <dt class="reserve-form__list-title">
+            <label for="email">メールアドレス</label>
+          </dt>
+          <dd class="reserve-form__list-input-wrapper">
+            <input type="text" id="email" class="reserve-form__list-input" placeholder="例：Example@example.com">
+          </dd>
+
+          <dt class="reserve-form__list-title">
+            <label for="plan">ご希望プラン<span class="inline-block">（空いているプランのみ表示されます）</span></label>
+          </dt>
+          <dd class="reserve-form__list-input-wrapper">
+            <select name="plan" id="plan" class="reserve-form__list-input">
+              <option value="">プランを選択してください</option>
+              <option value="plan1">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+              <option value="plan2">②平日に優雅に楽しむ、特別宿泊プラン</option>
+              <option value="plan3">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+            </select>
+          </dd>
+          <dt class="reserve-form__list-title">
+            <label for="">日時選択</label>
+          </dt>
+          <dd class="reserve-form__list-input-wrapper">
+            <input type="text" id="calender" class="reserve-form__list-input" placeholder="日時を選択してください">
+          </dd>
+        </dl>
+
+        <input type="button" value="送信する" class="reserve-form__button">
+
+      </form>
+
+      <div class="mask"></div>
+
+    </div>
+  </header>
+  <!-- /#header.header -->
+
+  <!-- /.subvisual -->
+  <div class="subvisual">
+    <div class="subvisual__inner">
+      <h1 class="subvisual__title">
+        お料理
+      </h1>
+    </div>
+    <div class="subvisual__img-wrapper">
+      <img src="img/menu-header.jpg" alt="" class="subvisual__img">
+    </div>
+  </div>
+  <!-- /.subvisual -->
+
+  <!-- /.breadcrumb -->
+  <div class="wrapper">
+    <div class="breadcrumb wrapper__inner">
+      <ul itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb__list">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Listitem" class="breadcrumb__item">
+          <a itemprop="item" href="index.html"><span itemprop="name">トップ</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Listitem" class="breadcrumb__item">
+          <a itemprop="item" href="menu.html"><span itemprop="name">お料理</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- /.breadcrumb -->
+
+  <div class="wrapper">
+    <div class="wrapper__inner">
+      <div class="content__main-title-wrapper js-fade-in up">
+        <h2 class="content__main-title fade-in-item">
+          地元熱海の市場で仕入れた食材のみを<span class="inline-block">使った食材をふんだんに使い、</span><br>
+          大将の技が光る「熱海料理」<br>
+          四季ごと、日ごとに変化する味わいを、<span class="inline-block">どうぞご堪能ください。</span>
+        </h2>
+      </div>
+
+      <ul class="content__list">
+
+        <!-- /#menu01.content__item -->
+        <li id="menu01" class="content__item">
+          <div class="content__description js-fade-in right">
+            <div class="content__img-wrapper fade-in-item">
+              <img src="img/menu01.jpg" alt="" class="content__img">
+            </div>
+            <div class="content__text-wrapper fade-in-item  js-fade-in right">
+              <h3 class="content__sub-title fade-in-item">
+                地元食材にこだわった会席料理
+              </h3>
+              <p class="content__text fade-in-item">
+                みずみずしくほのかに甘い野菜、<span class="inline-block">新鮮で味に深みがある魚介類、肉類。 </span><span class="inline-block">旬の素材をそのままに生かす、<span class="inline-block">経験に裏打ちされた確かな技。</span><br>
+                四季ごと、日ごとに変化する味わいを、<span class="inline-block">どうぞご堪能ください。</span>
+              </p>
+            </div>
+          </div>
+        </li>
+        <!-- /#menu01.content__item -->
+
+        <!-- /#menu02.content__item -->
+        <li id="menu02" class="content__item">
+          <div class="content__description js-fade-in left">
+            <div class="content__img-wrapper fade-in-item">
+              <img src="img/menu02.jpg" alt="" class="content__img">
+            </div>
+            <div class="content__text-wrapper fade-in-item  js-fade-in left">
+              <h3 class="content__sub-title fade-in-item">
+                熱海の漁港で目利きの品を
+              </h3>
+              <p class="content__text fade-in-item">
+                石井花壇でお出しする料理は<span class="inline-block">すべて料理長である大将の目利きで、</span><span class="inline-block">熱海の魚市場でその日のうちに仕入れたものを使用しております。</span><br>
+                日本海の宝玉を十分にお楽しみください。
+              </p>
+            </div>
+          </div>
+        </li>
+        <!-- /#menu02.content__item -->
+
+        <!-- /#menu03.content__item -->
+        <li id="menu03" class="content__item">
+          <div class="content__description js-fade-in right">
+            <div class="content__img-wrapper fade-in-item">
+              <img src="img/menu03.jpg" alt="" class="content__img">
+            </div>
+            <div class="content__text-wrapper fade-in-item  js-fade-in right">
+              <h3 class="content__sub-title fade-in-item">
+                食材が一流、職人も一流
+              </h3>
+              <p class="content__text fade-in-item">
+                石井花壇の料理人は料亭で<span class="inline-block">20年経験を積んだものばかり。</span><br>
+                <span class="inline-block">その時の最も旬な食材を、</span><span class="inline-block">最高の調理でお届けします。</span><br>
+                また、お料理への細かいご要望にもお答えできますので、<span class="inline-block"> 
+                お気軽にお申し付けください。</span>
+              </p>
+            </div>
+          </div>
+        </li>
+        <!-- /#menu03.content__item -->
+
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <!-- /#footer.footer -->
+  <footer id="footer" class="footer">
+    <div class="wrapper">
+      <div class="wrapper__inner">
+        <ul class="footer__list  js-fade-in up">
+          <li class="footer__list-item fade-in-item">
+            <a href="spa.html">温泉</a>
+          </li>
+          <li class="footer__list-item fade-in-item">
+            <a href="menu.html">お料理</a>
+          </li>
+          <li class="footer__list-item fade-in-item">
+            <a href="room.html">お部屋</a>
+          </li>
+        </ul>
+        <div class="footer__logo-wrapper">
+          <img src="img/footer-logo.png" alt="" class="footer__logo">
+        </div>
+        <div class="footer__adress">
+          <p class="footer__adress-text">〒000-0000</p>
+          <p class="footer__adress-text">山形県鶴岡市xxxxxxxxxxx</p>
+        </div>
+        <div class="footer__phonenumber">
+          <p class="footer__phonenumber-text">TEL.000-0000-0000</p>
+          <p class="footer__phonenumber-text">FAX.000-0000-0000</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      Copyright &copy; 石井花壇 All Rights Reserved.
+    </div>
+  </footer>
+  <!-- /#footer.footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="js/main.js"></script>
+  <script src="js/page.js"></script>
+</body>
+
+</html>
