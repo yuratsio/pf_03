@@ -32,7 +32,7 @@
       }
     }
     &__sm-slide {
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: rgba(0, 0, 0, 0.8);
     }
     &__sm-nav-item {
       &::before {
@@ -124,6 +124,15 @@
     height: 100%;
     overflow: hidden;
     background-color: #707070;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 80%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .3), transparent);
+    }
   }
   &__img {
     position: absolute;
@@ -132,12 +141,19 @@
     animation-name: mainvisual-animation;
     animation-duration: 30s;
     animation-iteration-count: infinite;
-
     object-fit: cover;
+    @include rc() {
+      animation-name: mainvisual-animation !important;
+      animation-duration: 30s !important;
+      animation-iteration-count: infinite !important;
+    }
 
     @for $i from 1 through 2 {
       &:nth-child(#{$i}) {
         animation-delay: -20s / $i;
+        @include rc() {
+          animation-delay: -20s / $i !important;
+        }
       }
     }
   }
@@ -169,12 +185,12 @@
   }
 }
 
-_::-webkit-full-page-media,
-_:future,
-:root .mainvisual__inner {
-  right: 50%;
-  transform: translateX(50%);
-}
+// _::-webkit-full-page-media,
+// _:future,
+// :root .mainvisual__inner {
+//   right: 50%;
+//   transform: translateX(50%);
+// }
 
 // =============================
 // introduction
@@ -806,6 +822,7 @@ _:future,
     font-weight: 800;
   }
   &__content-text {
+    color: #000;
     flex-basis: 75%;
     margin-bottom: 5px;
     font-weight: 500;
