@@ -188,13 +188,8 @@
 _::-webkit-full-page-media,
 _:future,
 :root .mainvisual__inner {
-  position: absolute;
-  top: 33%;
-  right: 15%;
-
-  @include mq(lg) {
-    right: 25%;
-  }
+  right: 50%;
+  transform: translateX(50%);
 }
 
 // =============================
