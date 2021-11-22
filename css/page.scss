@@ -137,6 +137,7 @@
   }
   &__main-title {
     font-size: 1.6rem;
+    font-weight: 500;
     line-height: 2;
   }
   &__list {
@@ -195,6 +196,7 @@
   &__sub-title {
     margin-bottom: 20px;
     font-size: 2rem;
+    font-weight: 500;
     line-height: 2;
 
     @include mq(md) {
