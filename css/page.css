@@ -200,6 +200,7 @@
 
 .content__main-title {
   font-size: 1.6rem;
+  font-weight: 500;
   line-height: 2;
 }
 
@@ -274,6 +275,7 @@
 .content__sub-title {
   margin-bottom: 20px;
   font-size: 2rem;
+  font-weight: 500;
   line-height: 2;
 }
 
